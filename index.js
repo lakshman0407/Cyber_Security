@@ -10,6 +10,11 @@ app.get('/time', function(req, resp){
     resp.send(`Current Time is: ${time}`)
 })
 
+app.get('/month', function(req, resp){
+    var month = new Date().toLocaleTimeString();
+    resp.send(`Current month is: ${month}`)
+})
+
 
 app.get('/date', function(req, resp){
     var date = new Date().toLocaleDateString();
